@@ -90,10 +90,6 @@
     }
   </style>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
   <!-- Meta Pixel Code -->
   <script>
     !function (f, b, e, v, n, t, s) {
@@ -118,7 +114,7 @@
 
     setTimeout(
       function () {
-        jQuery(document).ready(function ($) {
+        $(document).ready(function ($) {
           URLModifier('pstid'); // replace VTID to any key
         });
       }, 1000);
@@ -128,27 +124,27 @@
       var searchKeyWord = 'utm_campaign'; // replace utm_campaign to any key you want to search for
       var searchKeyWordUrl = getParamFromURL(searchKeyWord);
       if (searchKeyWordUrl) {
-        jQuery('[data-page-redirect-url]').each(function () {
-          var currentLinkUrl = jQuery(this).data('page-redirect-url');
+        $('[data-page-redirect-url]').each(function () {
+          var currentLinkUrl = $(this).data('page-redirect-url');
           if (typeof currentLinkUrl !== "undefined") //Anchor Links
           {
             var modifiedUrl = currentLinkUrl + (currentLinkUrl.match(/\?/) ? '&' : '?') + customKey + '=' + searchKeyWordUrl;
-            jQuery(this).attr('data-page-redirect-url', modifiedUrl);
+            $(this).attr('data-page-redirect-url', modifiedUrl);
           }
         });
         //searchKeyWordUrl = searchKeyWordUrl + '_optin1';
-        jQuery('a').each(function () {
-          var currentLinkUrl = jQuery(this).attr('href');
+        $('a').each(function () {
+          var currentLinkUrl = $(this).attr('href');
           if (typeof currentLinkUrl !== "undefined") //Anchor Links
           {
             var modifiedUrl = currentLinkUrl + (currentLinkUrl.match(/\?/) ? '&' : '?') + customKey + '=' + searchKeyWordUrl;
-            jQuery(this).attr('href', modifiedUrl);
+            $(this).attr('href', modifiedUrl);
           }
           else // Image Links
           {
-            var currentImgLinkUrl = jQuery(this).attr('data-imagelink');
+            var currentImgLinkUrl = $(this).attr('data-imagelink');
             var modifiedImgUrl = currentImgLinkUrl + (currentImgLinkUrl.match(/\?/) ? '&' : '?') + customKey + '=' + searchKeyWordUrl;
-            jQuery(this).attr('data-imagelink', modifiedImgUrl);
+            $(this).attr('data-imagelink', modifiedImgUrl);
           }
         });
       }
