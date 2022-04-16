@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<title>Protocolo Zero Queda</title>
+<title>Protocolo Bem estar</title>
 
 <head>
 
@@ -8,11 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="favicon.jpg">
   <style>
-    header {
-      background: "headerbg2.png";
-      background-repeat: no-repeat;
-    }
-
     @font-face {
       font-family: Gotham Rounded;
       src: url("font.otf") format("opentype");
@@ -28,7 +23,7 @@
     body {
       padding: 0;
       margin: 0;
-      display: flex;
+      /*display: flex;*/
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -58,13 +53,6 @@
       gap: 10px;
     }
 
-    @media (max-width: 991px) {
-      .answer {
-        display: grid;
-        /*grid-template-columns: repeat(1, auto);*/
-        gap: 10px;
-      }
-    }
 
     .btn {
       border-radius: 10px;
@@ -90,151 +78,69 @@
     }
   </style>
 
-  <!-- Meta Pixel Code -->
-  <script>
-    !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return; n = f.fbq = function () {
-        n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-      n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '697105428380616');
-    fbq('track', 'AddToCart');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=697105428380616&ev=AddToCart&noscript=1" /></noscript>
-  <!-- End Meta Pixel Code -->
-
-  <script>
-
-    setTimeout(
-      function () {
-        $(document).ready(function ($) {
-          URLModifier('pstid'); // replace VTID to any key
-        });
-      }, 1000);
-
-
-    function URLModifier(customKey) {
-      var searchKeyWord = 'utm_campaign'; // replace utm_campaign to any key you want to search for
-      var searchKeyWordUrl = getParamFromURL(searchKeyWord);
-      if (searchKeyWordUrl) {
-        $('[data-page-redirect-url]').each(function () {
-          var currentLinkUrl = $(this).data('page-redirect-url');
-          if (typeof currentLinkUrl !== "undefined") //Anchor Links
-          {
-            var modifiedUrl = currentLinkUrl + (currentLinkUrl.match(/\?/) ? '&' : '?') + customKey + '=' + searchKeyWordUrl;
-            $(this).attr('data-page-redirect-url', modifiedUrl);
-          }
-        });
-        //searchKeyWordUrl = searchKeyWordUrl + '_optin1';
-        $('a').each(function () {
-          var currentLinkUrl = $(this).attr('href');
-          if (typeof currentLinkUrl !== "undefined") //Anchor Links
-          {
-            var modifiedUrl = currentLinkUrl + (currentLinkUrl.match(/\?/) ? '&' : '?') + customKey + '=' + searchKeyWordUrl;
-            $(this).attr('href', modifiedUrl);
-          }
-          else // Image Links
-          {
-            var currentImgLinkUrl = $(this).attr('data-imagelink');
-            var modifiedImgUrl = currentImgLinkUrl + (currentImgLinkUrl.match(/\?/) ? '&' : '?') + customKey + '=' + searchKeyWordUrl;
-            $(this).attr('data-imagelink', modifiedImgUrl);
-          }
-        });
-      }
-    }
-    function getParamFromURL(t) {
-      var a = new RegExp("[?&]" + t + "=([^&#]*)").exec(window.location.href);
-      return null === a ? null : a[1]
-    }
-  </script>
 </head>
 
 <body>
-  <div>
-    <span style="color: #fff;">Responda as perguntas abaixo para analisarmos o seu perfil</span>
+  <div style="max-width: 800px; text-align: center; margin-bottom: 50px; margin: 0 auto;">
+    <p style="  font-size: 20pt; color: red; font-weight: 600;">Dicas para conseguir fazer em casa a VITAMINA do bem estar</p>
+    <img src="pzbwhite.png" width="400" />
   </div>
 
-  <div class="container">
+
+  <div class="container" style="margin: 50px auto 0 auto;">
     <div class="black">
       <div id="primeira">
         <div class="question">
-          <h1>Tudo Pronto!</h1>
-          <p>Clique no botão abaixo para continuar</p>
+          <p>Clique no botão abaixo para continuar e saber mais sobre a vitamina</p>
         </div>
         <div class="answer" style="align-content: center;">
-          <a href="https://protocolozerobarrigaapresentacao.com/" class="btn">CONTINUAR</a>
+          <a href="https://pay.kiwify.com.br/my092t8" class="btn">CONTINUAR</a>
         </div>
       </div>
     </div>
-    <p style="text-align: center; font-weight: bold;">© 2022 – Todos os direitos reservados. Este site não faz parte nem
-      é endossado pelo Facebook. Facebook é uma marca comercial da Facebook, Inc.</p>
   </div>
 
+  
 
+  <div style="max-width: 800px; text-align: center; margin-bottom: 50px;margin: 50px auto 0 auto;">
+    <img src="cientistas.jpg" width="400" />
+    <p style="text-align: justify; margin-left: 20px; ">
+      Uma equipe de 14 cientistas de uma universidade de prestígio nos EUA está por trás de uma vitamina do bem estar,
+      que contém todas as proteínas que nosso corpo precisa diariamente, esta vitamina dá muita energia e vigor ao nosso
+      organismo.
+      <br />
+      <br />
+      Além disso, é uma vitamina deliciosa!
+      <br />
+      <br />
+      Mais de 21.374 pessoas já testaram esta vitamina, e os feedbacks são maravilhosos, todos os feedbacks citam que a
+      vitamina é uma delícia, traz energia e muito vigor sempre alguns minutos após tomar.
+    </p>
 
-  <div class="container" style="display: none;">
+  </div>
+
+  <div class="container" style="margin: 50px auto 0 auto;">
     <div class="black">
       <div id="primeira">
         <div class="question">
-          <h1>Pergunta 1</h1>
-          <p>Você realmente quer descobrir esse segredo?</p>
+          <p>Clique no botão abaixo para continuar e saber mais sobre a vitamina</p>
         </div>
-        <div class="answer">
-          <button class="btn" onclick="segunda()">SIM</button>
-          <button class="btn" onclick="segunda()">NÃO</button>
-        </div>
-      </div>
-      <div id="segunda" class="hide">
-        <div class="question">
-          <h1>Pergunta 2</h1>
-          <p>Você promete não revelar para ninguém?</p>
-        </div>
-        <div class="answer">
-          <button class="btn" onclick="terceira()">SIM</button>
-          <button class="btn" onclick="terceira()">NÃO</button>
-        </div>
-      </div>
-      <div id="terceira" class="hide">
-        <div class="question">
-          <h1>Pergunta 3</h1>
-          <p>O vídeo a seguir tem um limite para pouquíssimas pessoas verem ao mesmo tempo... Você pretende ver até o
-            fim?</p>
-        </div>
-        <div class="answer">
-          <button class="btn" onclick="redirect()">SIM</button>
-          <button class="btn" onclick="redirect()">NÃO</button>
+        <div class="answer" style="align-content: center;">
+          <a href="https://pay.kiwify.com.br/my092t8" class="btn">CONTINUAR</a>
         </div>
       </div>
     </div>
     <p style="text-align: center; font-weight: bold;">© 2022 – Todos os direitos reservados. Este site não faz parte nem
       é endossado pelo Facebook. Facebook é uma marca comercial da Facebook, Inc.</p>
   </div>
-  <footer class="bg-dark py-3 text-center">
-    <div class="text-white" style="margin-top: 30px;"><a
-        href="https://protocolozerobarrigaapresentacao.com//termos.html" class="text-white">Termos de Uso</a> | <a
-        href="https://protocolozerobarrigaapresentacao.com//privacidade.html" class="text-white">Política de
+
+
+  <footer class="bg-dark py-3 text-center" style="max-width: 800px;margin: 0 auto; text-align: center;">
+    <div class="text-white" style="margin-top: 30px; " ><a href="https://protocolozerobarrigaapresentacao.com/termos.html"
+        class="text-white">Termos de Uso</a> | <a href="https://protocolozerobarrigaapresentacao.com/privacidade.html"
+        class="text-white">Política de
         Privacidade</a></div>
   </footer>
-  <script>
-    function segunda() {
-      document.getElementById("primeira").classList.add("hide")
-      document.getElementById("segunda").classList.remove("hide")
-    }
-    function terceira() {
-      document.getElementById("segunda").classList.add("hide")
-      document.getElementById("terceira").classList.remove("hide")
-    }
-    function redirect() {
-      location.href = "https://protocolozerobarrigaapresentacao.com/"
-    }
-  </script>
 </body>
 
 </html>
